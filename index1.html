@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- You can change the title to her name! -->
+    <title>Happy Birthday, My Love!</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for a nice, clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Applying the custom fonts */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Simple fade-in animation for sections */
+        .fade-in {
+            animation: fadeInAnimation 1s ease-in-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Add animation delays for a staggered effect */
+        .delay-1 { animation-delay: 1s; }
+        .delay-2 { animation-delay: 1.5s; }
+        .delay-3 { animation-delay: 2s; }
+        .delay-4 { animation-delay: 2.5s; }
+        .delay-5 { animation-delay: 3s; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-rose-50 to-pink-200 text-gray-800">
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Header Section -->
+        <header class="text-center fade-in">
+            <!-- EDIT THIS: Change [Her Name] to your girlfriend's name -->
+            <h1 class="text-5xl md:text-7xl font-bold text-pink-600 mb-4">Happy Birthday, pancake</h1>
+            <p class="text-lg md:text-xl text-gray-600">Celebrating another wonderful year of you.</p>
+        </header>
+
+        <!-- Countdown Timer Section -->
+        <section id="countdown-section" class="my-12 p-6 bg-white/60 rounded-xl shadow-lg text-center fade-in delay-1">
+            <h2 class="text-3xl font-bold text-gray-700 mb-4">The celebration is here!</h2>
+            <div id="countdown-timer" class="text-2xl md:text-4xl font-semibold text-pink-500 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div><span id="days" class="block text-5xl md:text-6xl">0</span> Days</div>
+                <div><span id="hours" class="block text-5xl md:text-6xl">0</span> Hours</div>
+                <div><span id="minutes" class="block text-5xl md:text-6xl">0</span> Minutes</div>
+                <div><span id="seconds" class="block text-5xl md:text-6xl">0</span> Seconds</div>
+            </div>
+            <div id="birthday-message" class="hidden text-4xl font-bold text-rose-500 mt-4">
+                🎉 Happy Birthday! 🎉
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="my-12 fade-in delay-2">
+            <h2 class="text-4xl text-center font-bold text-gray-700 mb-8">Our Cherished Moments</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- How to add photos: 
+                     1. Upload your photos to a free image hosting site like https://imgur.com/upload
+                     2. Right-click the uploaded image and select "Copy Image Address".
+                     3. Replace the `src` URL below with your image address. 
+                     4. Recommended image size is 600x400.
+                -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/fecdd3/44403c?text=Your+Photo+Here" alt="Memory 1" class="w-full h-48 object-cover">
+                    <p class="p-4 text-gray-600">Our first presentation</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/e9d5ff/44403c?text=Your+Photo+Here" alt="Memory 2" class="w-full h-48 object-cover">
+                    <p class="p-4 text-gray-600">Garba night.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/bfdbfe/44403c?text=Your+Photo+Here" alt="Memory 3" class="w-full h-48 object-cover">
+                    <p class="p-4 text-gray-600">Garba night.</p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/fecaca/44403c?text=Your+Photo+Here" alt="Memory 4" class="w-full h-48 object-cover">
+                    <p class="p-4 text-gray-600">Garba night</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/c7d2fe/44403c?text=Your+Photo+Here" alt="Memory 5" class="w-full h-48 object-cover">
+                    <p class="p-4 text-gray-600">First pic to me.</p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/fbcfe8/44403c?text=Your+Photo+Here" alt="Memory 6" class="w-full h-48 object-cover">
+                    <p class="p-4 text-gray-600">And one more!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- A Special Message Section -->
+        <section class="my-12 text-center bg-white/60 p-8 rounded-xl shadow-lg fade-in delay-3">
+            <h2 class="text-4xl font-bold text-gray-700 mb-6">A Note For You</h2>
+            <!-- EDIT THIS: Write your own personal message here -->
+            <blockquote class="text-lg text-gray-600 italic leading-relaxed max-w-3xl mx-auto">
+                "To the person who brings so much joy and light into my life, happy birthday. Every moment with you is a gift, and I cherish every single one. I can't wait to see what adventures this next year brings us. Thank you for being you. I love you more than words can say."
+            </blockquote>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-16 py-6 border-t border-rose-200 fade-in delay-4">
+            <!-- EDIT THIS: Change [Your Name] to your name -->
+            <p class="text-gray-600">Made with ❤️ by mayank</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // --- COUNTDOWN TIMER SCRIPT ---
+        
+        // IMPORTANT: Set your girlfriend's birthday here!
+        // The format is: "Month Day, Year HH:MM:SS"
+        // For example: "October 2, 2025 00:00:00"
+        const birthday = "October 2, 2025 00:00:00";
+
+        const countdownDate = new Date(birthday).getTime();
+
+        const timerInterval = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance < 0) {
+                clearInterval(timerInterval);
+                document.getElementById('countdown-timer').classList.add('hidden');
+                document.getElementById('birthday-message').classList.remove('hidden');
+                document.getElementById('countdown-section').querySelector('h2').textContent = "The day is finally here!";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+
+        }, 1000);
+
+        // --- Fade-in Animation Observer ---
+        // This makes the sections fade in as you scroll to them.
+        const sections = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
